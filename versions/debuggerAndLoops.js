@@ -39,3 +39,8 @@ function forEach(myArray, myFunction){
         myFunction(myArray[i]);
     }
 }
+ 
+//useful way to run javascript on click event
+ htmlId.addEventListener('click', function(event){
+     console.log(event);
+ })
