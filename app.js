@@ -1,10 +1,20 @@
-function makeSandwich(filling) {
-    console.log(`Get one slice of bread.\nAdd ${filling}.\nPut a slice of bread on top.`);
-}
-makeSandwich('ham');
+var todos = ["item 1", "item 2", "item 3", "item 4"];
 
-function sayHiTo(person){
-    console.log("hi", person);
+function displayTodos() {
+    console.log('My todos:', todos);
 }
 
-sayHiTo("Maddie");
+function addTodos(todo) {
+    todos.push(todo);
+    displayTodos();
+}
+
+function changeTodo(position, newValue) {
+    todos[position] = newValue;
+    displayTodos();
+}
+
+function deleteTodos(position){
+    todos.splice(position, 1);
+    displayTodos();
+}
