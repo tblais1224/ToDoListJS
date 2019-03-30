@@ -1,20 +1,24 @@
-var todos = ["item 1", "item 2", "item 3", "item 4"];
+//going to put everything from requirments into objects
 
-function displayTodos() {
-    console.log('My todos:', todos);
-}
+var todoList = {
+    todos: ["item 1", "item 2", "item 3", "item 4"],
 
-function addTodos(todo) {
-    todos.push(todo);
-    displayTodos();
-}
+    displayTodos: function() { //dont need to name function in method because it has key value name
+        console.log('My todos:', this.todos);
+    },
 
-function changeTodo(position, newValue) {
-    todos[position] = newValue;
-    displayTodos();
-}
+    addTodo: function(todo) {
+        this.todos.push(todo);
+        this.displayTodos();
+    },
 
-function deleteTodos(position){
-    todos.splice(position, 1);
-    displayTodos();
-}
+    changeTodo: function(position, newValue) {
+        this.todos[position] = newValue;
+        this.displayTodos();
+    },
+
+    deleteTodos: function(position) {
+        this.todos.splice(position, 1);
+        this.displayTodos();
+    }
+};
